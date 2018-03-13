@@ -12,11 +12,11 @@ open class BioPass {
 
     let serviceName: String
 
-    init(_ serviceName: String = Bundle.main.bundleIdentifier!) {
+    public init(_ serviceName: String = Bundle.main.bundleIdentifier!) {
         self.serviceName = serviceName
     }
 
-    static func isAvailable() -> Bool {
+    static public func isAvailable() -> Bool {
         if #available(iOS 8.0, macOS 10.12.1, *) {
             return true
         } else {
@@ -36,7 +36,7 @@ open class BioPass {
         return SecItemDelete(query)
     }
 
-    func store(_ password: String) -> Promise<Void> {
+    public func store(_ password: String) -> Promise<Void> {
         guard #available(iOS 8.0, macOS 10.12.1, *) else {
             return Promise(error: Error.notAvailable)
         }
@@ -72,7 +72,7 @@ open class BioPass {
         }
     }
 
-    func retreive(withPrompt prompt: String? = nil) -> Promise<String?> {
+    public func retreive(withPrompt prompt: String? = nil) -> Promise<String?> {
         guard #available(iOS 8.0, macOS 10.12.1, *) else {
             return Promise(error: Error.notAvailable)
         }
@@ -106,7 +106,7 @@ open class BioPass {
         }
     }
 
-    func delete() -> Promise<Void> {
+    public func delete() -> Promise<Void> {
         guard #available(iOS 8.0, macOS 10.12.1, *) else {
             return Promise(error: Error.notAvailable)
         }
