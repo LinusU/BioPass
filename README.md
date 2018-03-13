@@ -14,6 +14,12 @@ package.dependencies.append(
 )
 ```
 
+### Carthage
+
+```text
+github "LinusU/BioPass" ~> 1.1
+```
+
 ### Manually
 
 If you have [PromiseKit](https://github.com/mxcl/PromiseKit) installed, you can simply drop the single source file [BioPass.swift](Sources/BioPass/BioPass.swift) into your project.
@@ -75,3 +81,7 @@ Retreive a previously stored password. Returns a `Promise` that will settle with
 ### `.delete() -> Promise<Void>`
 
 Delete the stored password. Returns a `Promise` that will settle when the password have been deleted.
+
+## Hacking
+
+The Xcode project is generated automatically from `project.yml` using [XcodeGen](https://github.com/yonaskolb/XcodeGen). It's only checked in because Carthage needs it, do not edit it manually.

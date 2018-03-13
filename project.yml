@@ -1,0 +1,16 @@
+name: BioPass
+options:
+  bundleIdPrefix: org.linusu
+  deploymentTarget:
+    macOS: 10.11
+    iOS: 9.0
+targets:
+  BioPass:
+    type: framework
+    platform: [iOS, macOS]
+    sources: Sources/BioPass
+    scheme: {}
+    settings:
+      INFOPLIST_FILE: CarthageInfo.plist
+    dependencies:
+      - carthage: PromiseKit

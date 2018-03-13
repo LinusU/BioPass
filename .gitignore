@@ -1,5 +1,6 @@
 .DS_Store
 /.build
 /.vscode
+/Carthage
 /Packages
-/*.xcodeproj
+xcuserdata/
