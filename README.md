@@ -4,6 +4,8 @@ Store a password behind biometric authentication.
 
 This is a microlibrary for storing a password in the keychain, instructing the keychain to only give it back if the user first authenticates with TouchID or FaceID.
 
+**note:** In order for your user not to receive a prompt that your app does not yet support Face ID, you must set a value for the Privacy - Face ID Usage Description ([NSFaceIDUsageDescription](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW75)) key in your app’s Info.plist.
+
 ## Installation
 
 ### SwiftPM
