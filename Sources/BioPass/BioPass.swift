@@ -1,130 +1,68 @@
 import Foundation
-import PromiseKit
 
+import PromiseKit
+import Valet
+
+@available(iOS 9.0, macOS 10.12.1, *)
+internal protocol Backend {
+    func set(string: String, forKey: String) -> Bool
+    func string(forKey: String, withPrompt: String) -> SecureEnclave.Result<String>
+    func removeObject(forKey: String) -> Bool
+}
+
+@available(iOS 9.0, macOS 10.12.1, *)
+extension SecureEnclaveValet: Backend {}
+
+@available(iOS 9.0, macOS 10.12.1, *)
 open class BioPass {
     enum Error: Swift.Error {
+        case notAllowed
         case notAvailable
-        case failedEncodingPassword
-        case failedCreatingSAC
-        case unhandledKeychainError(OSStatus)
-        case unexpectedPasswordData
     }
 
-    let serviceName: String
+    internal let backend: Backend
 
     public init(_ serviceName: String = Bundle.main.bundleIdentifier!) {
-        self.serviceName = serviceName
+        self.backend = SecureEnclaveValet.valet(with: Identifier(nonEmpty: serviceName)!, accessControl: .biometricAny)
     }
 
-    static public func isAvailable() -> Bool {
-        if #available(iOS 8.0, macOS 10.12.1, *) {
-            return true
-        } else {
-            return false
-        }
-    }
-
-    internal func secItemAdd(_ attributes: CFDictionary, _ result: UnsafeMutablePointer<CFTypeRef?>?) -> OSStatus {
-        return SecItemAdd(attributes, result)
-    }
-
-    internal func secItemCopyMatching(_ query: CFDictionary, _ result: UnsafeMutablePointer<CFTypeRef?>?) -> OSStatus {
-        return SecItemCopyMatching(query, result)
-    }
-
-    internal func secItemDelete(_ query: CFDictionary) -> OSStatus {
-        return SecItemDelete(query)
+    internal init(withBackend backend: Backend) {
+        self.backend = backend
     }
 
     public func store(_ password: String) -> Promise<Void> {
-        guard #available(iOS 8.0, macOS 10.12.1, *) else {
-            return Promise(error: Error.notAvailable)
-        }
-
         return Promise { seal in
             DispatchQueue.global().async {
-                guard let encodedPassword = password.data(using: .utf8) else {
-                    return seal.reject(Error.failedEncodingPassword)
+                if self.backend.set(string: password, forKey: "password") {
+                    seal.fulfill(())
+                } else {
+                    seal.reject(Error.notAvailable)
                 }
-
-                let optionalSacObject = SecAccessControlCreateWithFlags(kCFAllocatorDefault, kSecAttrAccessibleWhenUnlockedThisDeviceOnly, .touchIDAny, nil)
-
-                guard let sacObject = optionalSacObject else {
-                    return seal.reject(Error.failedCreatingSAC)
-                }
-
-                let query: NSDictionary = [
-                    kSecClass: kSecClassGenericPassword,
-                    kSecAttrAccessControl: sacObject,
-                    kSecValueData: encodedPassword,
-                    kSecUseAuthenticationUI: kSecUseAuthenticationUIAllow,
-                    kSecAttrService: self.serviceName
-                ]
-
-                let status = self.secItemAdd(query, nil)
-
-                guard status == noErr else {
-                    return seal.reject(Error.unhandledKeychainError(status))
-                }
-
-                seal.fulfill(())
             }
         }
     }
 
-    public func retreive(withPrompt prompt: String? = nil) -> Promise<String?> {
-        guard #available(iOS 8.0, macOS 10.12.1, *) else {
-            return Promise(error: Error.notAvailable)
-        }
-
+    public func retreive(withPrompt prompt: String) -> Promise<String?> {
         return Promise { seal in
             DispatchQueue.global().async {
-                let query: NSMutableDictionary = [
-                    kSecClass: kSecClassGenericPassword,
-                    kSecAttrService: self.serviceName,
-                    kSecReturnData: true
-                ]
-
-                if let promptString = prompt {
-                    query.setObject(promptString, forKey: kSecUseOperationPrompt as! NSCopying)
-                }
-
-                var extractedData: CFTypeRef?
-                let status = self.secItemCopyMatching(query, &extractedData)
-
-                if status == errSecUserCanceled { return seal.fulfill(nil) }
-                if status == errSecItemNotFound { return seal.fulfill(nil) }
-                if status != errSecSuccess { return seal.reject(Error.unhandledKeychainError(status)) }
-
-                if let retrievedData = extractedData as? Data,
-                    let password = String(data: retrievedData, encoding: .utf8) {
-                    seal.fulfill(password)
-                } else {
-                    seal.reject(Error.unexpectedPasswordData)
+                switch self.backend.string(forKey: "password", withPrompt: prompt) {
+                case let .success(result):
+                    seal.fulfill(result)
+                case .userCancelled, .itemNotFound:
+                    seal.fulfill(nil)
                 }
             }
         }
     }
 
     public func delete() -> Promise<Void> {
-        guard #available(iOS 8.0, macOS 10.12.1, *) else {
-            return Promise(error: Error.notAvailable)
-        }
-
         return Promise { seal in
             DispatchQueue.global().async {
-                let query: NSDictionary = [
-                    kSecClass: kSecClassGenericPassword,
-                    kSecAttrService: self.serviceName,
-                    kSecReturnData: false
-                ]
-
-                let status = self.secItemDelete(query)
-
-                if status == noErr { return seal.fulfill(()) }
-                if status == errSecItemNotFound { return seal.fulfill(()) }
-
-                seal.reject(Error.unhandledKeychainError(status))
+                if self.backend.removeObject(forKey: "password") {
+                    seal.fulfill(())
+                } else {
+                    seal.reject(Error.notAllowed)
+                }
             }
         }
     }

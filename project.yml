@@ -14,3 +14,4 @@ targets:
       INFOPLIST_FILE: CarthageInfo.plist
     dependencies:
       - carthage: PromiseKit
+      - carthage: Valet

@@ -1,50 +1,56 @@
 import XCTest
+
 import PromiseKit
+import Valet
+
 @testable import BioPass
 
-class MockedBioPass: BioPass {
-    private var storedPassword: Data? = nil
+@available(iOS 9.0, macOS 10.12.1, *)
+class MockBackend: Backend {
+    private var storedPassword: String? = nil
 
-    override internal func secItemAdd(_ attributes: CFDictionary, _ result: UnsafeMutablePointer<CFTypeRef?>?) -> OSStatus {
-        let dict = attributes as! [String: Any?]
-        self.storedPassword = dict[kSecValueData as String] as? Data // CFDictionaryGetValue(attributes, kSecValueData as! UnsafeRawPointer) as! Data
-        return noErr
-    }
-
-    override internal func secItemCopyMatching(_ query: CFDictionary, _ result: UnsafeMutablePointer<CFTypeRef?>?) -> OSStatus {
-        if let password = self.storedPassword {
-            result!.pointee = password as CFTypeRef
-            return noErr
+    func set(string: String, forKey key: String) -> Bool {
+        if key == "password" {
+            self.storedPassword = string
+            return true
         } else {
-            return errSecItemNotFound
+            return false
         }
     }
 
-    override internal func secItemDelete(_ query: CFDictionary) -> OSStatus {
+    func string(forKey key: String, withPrompt: String) -> SecureEnclave.Result<String> {
+        if key == "password", let result = self.storedPassword {
+            return SecureEnclave.Result<String>.success(result)
+        } else {
+            return .itemNotFound
+        }
+    }
+
+    func removeObject(forKey: String) -> Bool {
         self.storedPassword = nil
-        return noErr
+        return true
     }
 }
 
 class BioPassTests: XCTestCase {
-    func testShouldBeAvailable() {
-        XCTAssertEqual(BioPass.isAvailable(), true)
-    }
-
     func testStoreRetreiveDelete() {
+        guard #available(iOS 9.0, macOS 10.12.1, *) else { return }
+
         let secret = "Hello, World!"
-        let bioPass = MockedBioPass("org.linusu.biopass.test")
+        let bioPass = BioPass(withBackend: MockBackend())
 
         let done = self.expectation(description: "Operations completed")
 
-        bioPass.store(secret).then {
-            bioPass.retreive()
+        firstly {
+            bioPass.store(secret)
+        }.then { _ in
+            bioPass.retreive(withPrompt: "Test")
         }.then { result -> Promise<Void> in
             XCTAssertEqual(result, secret)
 
             return bioPass.delete()
-        }.then {
-            bioPass.retreive()
+        }.then { _ in
+            bioPass.retreive(withPrompt: "Test")
         }.done { result in
             XCTAssertEqual(result, nil)
             done.fulfill()
@@ -57,7 +63,6 @@ class BioPassTests: XCTestCase {
 
 
     static var allTests = [
-        ("testShouldBeAvailable", testShouldBeAvailable),
         ("testStoreRetreiveDelete", testStoreRetreiveDelete),
     ]
 }

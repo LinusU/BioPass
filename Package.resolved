@@ -6,8 +6,17 @@
         "repositoryURL": "https://github.com/mxcl/PromiseKit",
         "state": {
           "branch": null,
-          "revision": "c18ad3a4036eaa51b2f63ff6bce18eb2b7237d6a",
-          "version": "6.2.1"
+          "revision": "62c61dd712da2f29a339cc2b46bb28a6a90086c6",
+          "version": "6.2.2"
+        }
+      },
+      {
+        "package": "Valet",
+        "repositoryURL": "https://github.com/LinusU/Valet",
+        "state": {
+          "branch": "swiftpm",
+          "revision": "1cf7da0f3a1838d4d377d5a2393fda22d382ab63",
+          "version": null
         }
       }
     ]

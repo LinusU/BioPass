@@ -7,20 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF_182651850802 /* Valet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_840167056190 /* Valet.framework */; };
 		BF_210157004244 /* BioPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_362923695501 /* BioPass.swift */; };
 		BF_220295521277 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_794320042762 /* PromiseKit.framework */; };
 		BF_276145292024 = {isa = PBXBuildFile; fileRef = FR_436881710396 /* BioPass.framework */; };
 		BF_388668250007 = {isa = PBXBuildFile; fileRef = FR_246485168792 /* BioPass.framework */; };
+		BF_727515382400 /* Valet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_137811544684 /* Valet.framework */; };
 		BF_748071662415 /* BioPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_362923695501 /* BioPass.swift */; };
 		BF_756942925533 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_345097450918 /* PromiseKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FR_137811544684 /* Valet.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Valet.framework; sourceTree = "<group>"; };
 		FR_246485168792 /* BioPass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BioPass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FR_345097450918 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PromiseKit.framework; sourceTree = "<group>"; };
 		FR_362923695501 /* BioPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioPass.swift; sourceTree = "<group>"; };
 		FR_436881710396 /* BioPass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BioPass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FR_794320042762 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PromiseKit.framework; sourceTree = "<group>"; };
+		FR_840167056190 /* Valet.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Valet.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF_756942925533 /* PromiseKit.framework in Frameworks */,
+				BF_182651850802 /* Valet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,6 +42,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF_220295521277 /* PromiseKit.framework in Frameworks */,
+				BF_727515382400 /* Valet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				FR_345097450918 /* PromiseKit.framework */,
+				FR_840167056190 /* Valet.framework */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -63,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				FR_794320042762 /* PromiseKit.framework */,
+				FR_137811544684 /* Valet.framework */,
 			);
 			path = Mac;
 			sourceTree = "<group>";
