@@ -11,6 +11,7 @@ targets:
     sources: Sources/BioPass
     scheme: {}
     settings:
+      APPLICATION_EXTENSION_API_ONLY: true
       INFOPLIST_FILE: CarthageInfo.plist
     dependencies:
       - carthage: PromiseKit
