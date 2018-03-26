@@ -72,6 +72,10 @@ firstly {
 
 Create a new BioPass object, optionally passing in a service name to store the password under. If no service name is provided, it will default to `Bundle.main.bundleIdentifier!`.
 
+### `BioPass(withSharedAccessGroup sharedAccessGroupName: String)`
+
+Create a new BioPass object that will store the data in a shared keychain access group. The `sharedAccessGroupName` should match one of the names under the apps `keychain-access-groups` entitlement (*without* the 10 char Bundle Seed ID, that part will be added automatically).
+
 ### `.store(_ password: String) -> Promise<Void>`
 
 Store a password for later retreival. Returns a `Promise` that will settle when the password have been saved.

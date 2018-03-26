@@ -26,6 +26,10 @@ open class BioPass {
         self.backend = SecureEnclaveValet.valet(with: Identifier(nonEmpty: serviceName)!, accessControl: .biometricAny)
     }
 
+    public init(withSharedAccessGroup sharedAccessGroupName: String) {
+        self.backend = SecureEnclaveValet.sharedAccessGroupValet(with: Identifier(nonEmpty: sharedAccessGroupName)!, accessControl: .biometricAny)
+    }
+
     internal init(withBackend backend: Backend) {
         self.backend = backend
     }
