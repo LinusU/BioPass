@@ -15,9 +15,9 @@ BioPass uses [Valet](https://github.com/square/Valet) under the hood, but expose
 ### SwiftPM
 
 ```swift
-package.dependencies.append(
-    .package(url: "https://github.com/LinusU/BioPass", from: "2.0.0")
-)
+dependencies: [
+    .package(url: "https://github.com/LinusU/BioPass", from: "2.0.0"),
+]
 ```
 
 ### Carthage
