@@ -7,120 +7,118 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BF_182651850802 /* Valet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_840167056190 /* Valet.framework */; };
-		BF_210157004244 /* BioPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_362923695501 /* BioPass.swift */; };
-		BF_220295521277 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_794320042762 /* PromiseKit.framework */; };
-		BF_276145292024 = {isa = PBXBuildFile; fileRef = FR_436881710396 /* BioPass.framework */; };
-		BF_388668250007 = {isa = PBXBuildFile; fileRef = FR_246485168792 /* BioPass.framework */; };
-		BF_727515382400 /* Valet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_137811544684 /* Valet.framework */; };
-		BF_748071662415 /* BioPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_362923695501 /* BioPass.swift */; };
-		BF_756942925533 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_345097450918 /* PromiseKit.framework */; };
+		BF_19A324FDBCA51C9934733A61F11EA499 /* BioPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_273D86676446A092832B974CDC8B7C0E /* BioPass.swift */; };
+		BF_2123B32BA0507D0411784B386A4AF2E3 /* Valet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_3CFFDC7DF91FCEE14385E4B6BF0AD9B0 /* Valet.framework */; };
+		BF_23685CCE3980F55C6F61823E8EDCDC1E /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_2229B2C73C733A0BD9A936A4A5540C7A /* PromiseKit.framework */; };
+		BF_62163144C2E3E538D4085506263435EA /* BioPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_273D86676446A092832B974CDC8B7C0E /* BioPass.swift */; };
+		BF_C19AE4AB0D3B40C0BFE0DFD7F5D324AA /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_77A0977088142C542150928DD3E9FE17 /* PromiseKit.framework */; };
+		BF_F0C491A5FA57103F3FB71565B8D6D61E /* Valet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_D4A49A7E6BC1A4EA1B00BE3BCB591C76 /* Valet.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FR_137811544684 /* Valet.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Valet.framework; sourceTree = "<group>"; };
-		FR_246485168792 /* BioPass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BioPass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FR_345097450918 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PromiseKit.framework; sourceTree = "<group>"; };
-		FR_362923695501 /* BioPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioPass.swift; sourceTree = "<group>"; };
-		FR_436881710396 /* BioPass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BioPass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FR_794320042762 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PromiseKit.framework; sourceTree = "<group>"; };
-		FR_840167056190 /* Valet.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Valet.framework; sourceTree = "<group>"; };
+		FR_03B8874ABC773062019D9E4DE2EE4C81 /* BioPass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BioPass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FR_2229B2C73C733A0BD9A936A4A5540C7A /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PromiseKit.framework; sourceTree = "<group>"; };
+		FR_273D86676446A092832B974CDC8B7C0E /* BioPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioPass.swift; sourceTree = "<group>"; };
+		FR_3CFFDC7DF91FCEE14385E4B6BF0AD9B0 /* Valet.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Valet.framework; sourceTree = "<group>"; };
+		FR_77A0977088142C542150928DD3E9FE17 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PromiseKit.framework; sourceTree = "<group>"; };
+		FR_D349951DCC355BBA0813BD1700D05C95 /* BioPass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BioPass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FR_D4A49A7E6BC1A4EA1B00BE3BCB591C76 /* Valet.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Valet.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FBP_24648516879 /* Frameworks */ = {
+		FBP_0AAF7FD1C66C6E3DBD038A3F80E1908F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF_756942925533 /* PromiseKit.framework in Frameworks */,
-				BF_182651850802 /* Valet.framework in Frameworks */,
+				BF_23685CCE3980F55C6F61823E8EDCDC1E /* PromiseKit.framework in Frameworks */,
+				BF_2123B32BA0507D0411784B386A4AF2E3 /* Valet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FBP_43688171039 /* Frameworks */ = {
+		FBP_F1B3F7ED5E4CE1D910348B35135ECCEB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF_220295521277 /* PromiseKit.framework in Frameworks */,
-				BF_727515382400 /* Valet.framework in Frameworks */,
+				BF_C19AE4AB0D3B40C0BFE0DFD7F5D324AA /* PromiseKit.framework in Frameworks */,
+				BF_F0C491A5FA57103F3FB71565B8D6D61E /* Valet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		G_1952740716080 /* Frameworks */ = {
+		G_1BBA987CFF9F4E780D6B09B13DB4679C /* Carthage */ = {
 			isa = PBXGroup;
 			children = (
-				G_2883690153011 /* Carthage */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		G_2262017438925 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				FR_345097450918 /* PromiseKit.framework */,
-				FR_840167056190 /* Valet.framework */,
-			);
-			path = iOS;
-			sourceTree = "<group>";
-		};
-		G_2262017442691 /* Mac */ = {
-			isa = PBXGroup;
-			children = (
-				FR_794320042762 /* PromiseKit.framework */,
-				FR_137811544684 /* Valet.framework */,
-			);
-			path = Mac;
-			sourceTree = "<group>";
-		};
-		G_2883690153011 /* Carthage */ = {
-			isa = PBXGroup;
-			children = (
-				G_2262017442691 /* Mac */,
-				G_2262017438925 /* iOS */,
+				G_FF316C77804708B6E73EA37E53FCEED1 /* iOS */,
+				G_ACCAFC0CD49F6F3A0463B0F9B5C0A17E /* Mac */,
 			);
 			name = Carthage;
 			path = Carthage/Build;
 			sourceTree = "<group>";
 		};
-		G_4447787173969 /* BioPass */ = {
+		G_30EBC083585E68955329645262AAEFA9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FR_362923695501 /* BioPass.swift */,
+				FR_03B8874ABC773062019D9E4DE2EE4C81 /* BioPass.framework */,
+				FR_D349951DCC355BBA0813BD1700D05C95 /* BioPass.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		G_3D8761F7DD532E03C335D3498BD087A0 = {
+			isa = PBXGroup;
+			children = (
+				G_E1CE850FC7CDCDF645FA84D929161180 /* BioPass */,
+				G_6FF8935BBD0FAFE24FF46CEBEE12597F /* Frameworks */,
+				G_30EBC083585E68955329645262AAEFA9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		G_6FF8935BBD0FAFE24FF46CEBEE12597F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				G_1BBA987CFF9F4E780D6B09B13DB4679C /* Carthage */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		G_ACCAFC0CD49F6F3A0463B0F9B5C0A17E /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				FR_2229B2C73C733A0BD9A936A4A5540C7A /* PromiseKit.framework */,
+				FR_3CFFDC7DF91FCEE14385E4B6BF0AD9B0 /* Valet.framework */,
+			);
+			path = Mac;
+			sourceTree = "<group>";
+		};
+		G_E1CE850FC7CDCDF645FA84D929161180 /* BioPass */ = {
+			isa = PBXGroup;
+			children = (
+				FR_273D86676446A092832B974CDC8B7C0E /* BioPass.swift */,
 			);
 			name = BioPass;
 			path = Sources/BioPass;
 			sourceTree = "<group>";
 		};
-		G_8448771205358 = {
+		G_FF316C77804708B6E73EA37E53FCEED1 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				G_4447787173969 /* BioPass */,
-				G_1952740716080 /* Frameworks */,
-				G_8620238527590 /* Products */,
+				FR_77A0977088142C542150928DD3E9FE17 /* PromiseKit.framework */,
+				FR_D4A49A7E6BC1A4EA1B00BE3BCB591C76 /* Valet.framework */,
 			);
-			sourceTree = "<group>";
-		};
-		G_8620238527590 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				FR_246485168792 /* BioPass.framework */,
-				FR_436881710396 /* BioPass.framework */,
-			);
-			name = Products;
+			path = iOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		NT_246485168792 /* BioPass_iOS */ = {
+		NT_62A4E45D80381776E0FB2C027AFA1654 /* BioPass_iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CL_246485168792 /* Build configuration list for PBXNativeTarget "BioPass_iOS" */;
+			buildConfigurationList = CL_0F2A39A461678002147FF6B54E33EB7F /* Build configuration list for PBXNativeTarget "BioPass_iOS" */;
 			buildPhases = (
-				SBP_24648516879 /* Sources */,
-				FBP_24648516879 /* Frameworks */,
+				SBP_D0E1635DA57860F50F3E170A950481F9 /* Sources */,
+				FBP_F1B3F7ED5E4CE1D910348B35135ECCEB /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -128,15 +126,15 @@
 			);
 			name = BioPass_iOS;
 			productName = BioPass_iOS;
-			productReference = FR_246485168792 /* BioPass.framework */;
+			productReference = FR_03B8874ABC773062019D9E4DE2EE4C81 /* BioPass.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		NT_436881710396 /* BioPass_macOS */ = {
+		NT_CEE1089D0FFB2FF2F5E6B9152917D70E /* BioPass_macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CL_436881710396 /* Build configuration list for PBXNativeTarget "BioPass_macOS" */;
+			buildConfigurationList = CL_C32238454C8A7134564AAE945044821D /* Build configuration list for PBXNativeTarget "BioPass_macOS" */;
 			buildPhases = (
-				SBP_43688171039 /* Sources */,
-				FBP_43688171039 /* Frameworks */,
+				SBP_ED6731DFA662AD1F489742A0FBEA857B /* Sources */,
+				FBP_0AAF7FD1C66C6E3DBD038A3F80E1908F /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -144,79 +142,107 @@
 			);
 			name = BioPass_macOS;
 			productName = BioPass_macOS;
-			productReference = FR_436881710396 /* BioPass.framework */;
+			productReference = FR_D349951DCC355BBA0813BD1700D05C95 /* BioPass.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		P_8216454795226 /* Project object */ = {
+		P_7C815AC750DCDF4EBB7892C558519D54 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1000;
 			};
-			buildConfigurationList = CL_821645479522 /* Build configuration list for PBXProject "BioPass" */;
+			buildConfigurationList = CL_CBD065A826C8785655453E84A26357A8 /* Build configuration list for PBXProject "BioPass" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
-			mainGroup = G_8448771205358;
+			knownRegions = (
+				en,
+			);
+			mainGroup = G_3D8761F7DD532E03C335D3498BD087A0;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				NT_246485168792 /* BioPass_iOS */,
-				NT_436881710396 /* BioPass_macOS */,
+				NT_62A4E45D80381776E0FB2C027AFA1654 /* BioPass_iOS */,
+				NT_CEE1089D0FFB2FF2F5E6B9152917D70E /* BioPass_macOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		SBP_24648516879 /* Sources */ = {
+		SBP_D0E1635DA57860F50F3E170A950481F9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF_748071662415 /* BioPass.swift in Sources */,
+				BF_62163144C2E3E538D4085506263435EA /* BioPass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		SBP_43688171039 /* Sources */ = {
+		SBP_ED6731DFA662AD1F489742A0FBEA857B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF_210157004244 /* BioPass.swift in Sources */,
+				BF_19A324FDBCA51C9934733A61F11EA499 /* BioPass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		BC_292456299183 /* Debug */ = {
+		BC_37D7994319000FE7DE386D6EF3735670 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
-				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = CarthageInfo.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.linusu.BioPass-macOS";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.linusu.BioPass-iOS";
 				PRODUCT_NAME = BioPass;
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
-		BC_479945831424 /* Debug */ = {
+		BC_8DE869C8BD65140CF26249E19A800445 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = CarthageInfo.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.linusu.BioPass-iOS";
+				PRODUCT_NAME = BioPass;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		BC_8F29F18BDEC3A94D7F3864A07768A040 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -230,6 +256,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -237,6 +264,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -270,11 +298,11 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
-		BC_517610310231 /* Release */ = {
+		BC_A1F96F252F19B9ACA12FB6F030110E64 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
@@ -285,7 +313,32 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = CarthageInfo.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.linusu.BioPass-macOS";
+				PRODUCT_NAME = BioPass;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		BC_F1B7AB44E2E3A80BDF057BF296D401DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
@@ -301,61 +354,7 @@
 			};
 			name = Release;
 		};
-		BC_567654112648 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = CarthageInfo.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.linusu.BioPass-iOS";
-				PRODUCT_NAME = BioPass;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Release;
-		};
-		BC_717567291332 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = CarthageInfo.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.linusu.BioPass-iOS";
-				PRODUCT_NAME = BioPass;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Debug;
-		};
-		BC_881114754245 /* Release */ = {
+		BC_FD1434C2E4DE7602B0463AF5A80BCBBA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -369,6 +368,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -376,6 +376,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -400,7 +401,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -408,34 +409,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CL_246485168792 /* Build configuration list for PBXNativeTarget "BioPass_iOS" */ = {
+		CL_0F2A39A461678002147FF6B54E33EB7F /* Build configuration list for PBXNativeTarget "BioPass_iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BC_717567291332 /* Debug */,
-				BC_567654112648 /* Release */,
+				BC_37D7994319000FE7DE386D6EF3735670 /* Debug */,
+				BC_8DE869C8BD65140CF26249E19A800445 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "";
 		};
-		CL_436881710396 /* Build configuration list for PBXNativeTarget "BioPass_macOS" */ = {
+		CL_C32238454C8A7134564AAE945044821D /* Build configuration list for PBXNativeTarget "BioPass_macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BC_292456299183 /* Debug */,
-				BC_517610310231 /* Release */,
+				BC_A1F96F252F19B9ACA12FB6F030110E64 /* Debug */,
+				BC_F1B7AB44E2E3A80BDF057BF296D401DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "";
 		};
-		CL_821645479522 /* Build configuration list for PBXProject "BioPass" */ = {
+		CL_CBD065A826C8785655453E84A26357A8 /* Build configuration list for PBXProject "BioPass" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BC_479945831424 /* Debug */,
-				BC_881114754245 /* Release */,
+				BC_8F29F18BDEC3A94D7F3864A07768A040 /* Debug */,
+				BC_FD1434C2E4DE7602B0463AF5A80BCBBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = P_8216454795226 /* Project object */;
+	rootObject = P_7C815AC750DCDF4EBB7892C558519D54 /* Project object */;
 }

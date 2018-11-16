@@ -12,7 +12,8 @@ targets:
     scheme: {}
     settings:
       APPLICATION_EXTENSION_API_ONLY: true
-      INFOPLIST_FILE: CarthageInfo.plist
     dependencies:
       - carthage: PromiseKit
       - carthage: Valet
+    info:
+      path: CarthageInfo.plist
